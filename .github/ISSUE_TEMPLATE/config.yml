@@ -1,5 +1,7 @@
-blank_issues_enabled: true
-contact_links:   
-  - name: ❓ StackOverflow
-    url: https://stackoverflow.com
-    about: Ask question or find answers on Stack overflow
+blank_issues_enabled: false
+contact_links:
+  - name: Troubleshooting
+    url: README.md/#troubleshooting
+  - name: Slack Channel
+    url: https://kubernetes.slack.com
+    about: Ask question on our slack channel
