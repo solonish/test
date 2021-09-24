@@ -1,7 +1,7 @@
 blank_issues_enabled: false
 contact_links:
   - name: Troubleshooting
-    url: README.md/#troubleshooting
+    url: https://github.com/solonish/test#troubleshooting
     about: Check the basic troubleshooting steps here
   - name: Slack Channel
     url: https://kubernetes.slack.com
