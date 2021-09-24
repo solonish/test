@@ -2,6 +2,7 @@ blank_issues_enabled: false
 contact_links:
   - name: Troubleshooting
     url: README.md/#troubleshooting
+    about: Check the basic troubleshooting steps here
   - name: Slack Channel
     url: https://kubernetes.slack.com
     about: Ask question on our slack channel
