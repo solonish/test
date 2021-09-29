@@ -3,6 +3,9 @@ contact_links:
   - name: Troubleshooting
     url: https://github.com/solonish/test#troubleshooting
     about: Check the basic troubleshooting steps here
+  - name: Open issues
+    url: https://github.com/cert-manager/aws-privateca-issuer/issues
+    about: Search open issues
   - name: Slack Channel
     url: https://kubernetes.slack.com
     about: Ask question on our slack channel
