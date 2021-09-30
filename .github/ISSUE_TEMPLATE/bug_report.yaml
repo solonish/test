@@ -42,3 +42,16 @@ body:
       label: Relevant log output
       description: Please copy and paste any relevant log output.
       render: shell
+  - type: dropdown
+    id: severity_1
+    attributes:
+      label: Severity
+#       description: What version are you using?
+      options:
+        - 1 - Critical Function Down
+        - 2 - Critical Function Impaired
+        - 3 - Group Productivity Impaired
+        - 4 - Individual Productivity Impaired
+        - 5 - Productivity not immediately affected
+    validations:
+      required: true
