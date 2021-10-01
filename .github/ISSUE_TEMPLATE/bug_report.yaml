@@ -10,10 +10,19 @@ body:
       value: |
         Thanks for taking the time to fill out this bug report!
   - type: textarea
-    id: what-happened
+    id: expected-outcome
     attributes:
-      label: Describe the bug
-      description: A concise description of what the bug is.
+      label: Describe the expected outcome
+#       description: A concise description of .
+#       placeholder: Tell us what you see!
+#       value: "A bug happened!"
+    validations:
+      required: true
+  - type: textarea
+    id: actual-outcome
+    attributes:
+      label: Describe the actual outcome
+#       description: A concise description of what the bug is.
 #       placeholder: Tell us what you see!
 #       value: "A bug happened!"
     validations:
@@ -43,15 +52,28 @@ body:
       description: Please copy and paste any relevant log output.
       render: shell
   - type: dropdown
-    id: severity_1
+    id: category
     attributes:
-      label: Severity
-#       description: What version are you using?
+      label: Category
+      description: Select the category that best fits the problem.
       options:
-        - 1 - Critical Function Down
-        - 2 - Critical Function Impaired
-        - 3 - Group Productivity Impaired
-        - 4 - Individual Productivity Impaired
-        - 5 - Productivity not immediately affected
+        - Authentication Issue
+        - Supported Workflow Broken
+        - Build Issues
+        - Broken Testing Infrastructure
+        - Incorrect Documentation
+        - Other
     validations:
       required: true
+  - type: dropdown
+    id: severity
+    attributes:
+      label: Severity
+      description: Assgin a severity level to this issue. Please refer [Severity and Priority of Issues]() for more details 
+      options:
+        - Severity 1
+        - Severity 2
+        - Severity 3
+        - Severity 4
+    validations:
+      required: False
