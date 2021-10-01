@@ -52,21 +52,16 @@ body:
       description: Please copy and paste any relevant log output.
       render: shell
   - type: textarea
+    id: commands-output
     attributes:
-      label: Environment
-      description: |
-        examples:
-          - **OS**: Ubuntu 20.04
-          - **Node**: 13.14.0
-          - **npm**: 7.6.3
+      label: Add output of the following commands
       value: |
-          - OS:
-          - Node:
-          - npm:
-      value: test
-      render: markdown
+        - helm version
+        - helm ls -n aws-pca-issuer
+        - kubectl get pods --namespace aws-pca-issuer
+      render: shell
     validations:
-      required: false
+      required: true
   - type: dropdown
     id: category
     attributes:
