@@ -63,6 +63,7 @@ body:
           - OS:
           - Node:
           - npm:
+      value: test
       render: markdown
     validations:
       required: false
