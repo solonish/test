@@ -57,8 +57,11 @@ body:
       label: Add output of the following commands
       value: |
         - helm version
+        
         - helm ls -n aws-pca-issuer
+        
         - kubectl get pods --namespace aws-pca-issuer
+        
       render: shell
     validations:
       required: true
