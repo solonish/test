@@ -69,7 +69,7 @@ body:
     id: severity
     attributes:
       label: Severity
-      description: Assgin a severity level to this issue. Please refer [Severity and Priority of Issues](docs/severity.md) for more details 
+      description: Assgin a severity level to this issue. Please refer [Severity of Issues](https://github.com/solonish/test/blob/main/docs/severity.md) for more details 
       options:
         - Severity 1
         - Severity 2
