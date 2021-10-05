@@ -3,6 +3,8 @@
 The categories of the issues are as follows:
 
 * Authentication Issue
+  
+  Any breakage in the following:
 
   |  |   |
   |---|---|
