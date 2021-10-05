@@ -58,7 +58,7 @@ body:
 #       description: You may select more than one.
       options:
         - label: Check the [Troubleshooting section](#troubleshooting)
-        - label: [Search open issues](https://github.com/cert-manager/aws-privateca-issuer/issues)
+        - label: Search open [issues](https://github.com/cert-manager/aws-privateca-issuer/issues)
     validations:
       required: true
   - type: dropdown
