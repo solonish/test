@@ -32,7 +32,7 @@ The categories of the issues are as follows:
 
 * Incorrect Documentation
 
-
+  Any documentation related issues, including incorrect information, typos, broken links etc.
 
 * Other
 
