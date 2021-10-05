@@ -51,18 +51,14 @@ body:
       label: Relevant log output
       description: Please copy and paste any relevant log output.
       render: shell
-  - type: textarea
-    id: commands-output
+  - type: checkboxes
+    id: help-used
     attributes:
-      label: Add output of the following commands
-      value: |
-        - helm version
-        
-        - helm ls -n aws-pca-issuer
-        
-        - kubectl get pods --namespace aws-pca-issuer
-        
-      render: shell
+      label: Have you tried the following?
+#       description: You may select more than one.
+      options:
+        - label: Check the [Troubleshooting section](#troubleshooting)
+        - label: [Search open issues](https://github.com/cert-manager/aws-privateca-issuer/issues)
     validations:
       required: true
   - type: dropdown
