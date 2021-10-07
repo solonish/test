@@ -58,7 +58,7 @@ body:
     id: category
     attributes:
       label: Category
-      description: Select the category that best fits the issue. Please refer [Categories of Issues](https://github.com/solonish/test/blob/main/docs/issue-categories.md) for more details.
+      description: Select the category that best fits the issue. Please refer [Categories of Issues](../docs/issue-categories.md) for more details.
       options:
         - Authentication Issue
         - Supported Workflow Broken
@@ -72,7 +72,7 @@ body:
     id: severity
     attributes:
       label: Severity
-      description: Assgin a severity level to this issue. Please refer [Severity of Issues](https://github.com/solonish/test/blob/main/docs/severity.md) for more details.
+      description: Assgin a severity level to this issue. Please refer [Severity of Issues](../docs/severity.md) for more details.
       options:
         - Severity 1
         - Severity 2
