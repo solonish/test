@@ -57,7 +57,7 @@ body:
       label: Have you tried the following?
 #       description: You may select more than one.
       options:
-        - label: Check the [Troubleshooting section](#troubleshooting)
+        - label: Check the [Troubleshooting section](https://github.com/cert-manager/aws-privateca-issuer#troubleshooting)
         - label: Search open [issues](https://github.com/cert-manager/aws-privateca-issuer/issues)
     validations:
       required: true
