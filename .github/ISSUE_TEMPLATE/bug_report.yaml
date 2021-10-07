@@ -50,7 +50,7 @@ body:
     attributes:
       label: Have you tried the following?
       options:
-        - label: Check the [Troubleshooting section](../../README.md#troubleshooting)
+        - label: Check the [Troubleshooting section](../README.md#troubleshooting)
           required: true
         - label: Search open [issues](https://github.com/cert-manager/aws-privateca-issuer/issues)
           required: true
