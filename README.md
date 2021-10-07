@@ -28,7 +28,7 @@ This project acts as an addon (see https://cert-manager.io/docs/configuration/ex
         git checkout cleanup
 
     Also, please be sure you are using the plugin with an IAM user, as that is the most reliable workflow https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_access-keys.html#Using_CreateAccessKey
-    This user must have minimum permissions listed here: https://github.com/cert-manager/aws-privateca-issuer#configuration
+    This user must have minimum permissions listed here: #configuration
 
         export AWS_SECRET_ACCESS_KEY=<Secret Access Key you generated>
         export AWS_ACCESS_KEY_ID=<Access Key you generated>
