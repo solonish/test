@@ -27,6 +27,12 @@ body:
       label: Steps to reproduce
     validations:
       required: false   
+  - type: textarea
+    id: logs
+    attributes:
+      label: Relevant log output
+      description: Please copy and paste any relevant log output.
+      render: shell
   - type: dropdown
     id: version
     attributes:
@@ -39,18 +45,12 @@ body:
         - 0.2.0
     validations:
       required: true
-  - type: textarea
-    id: logs
-    attributes:
-      label: Relevant log output
-      description: Please copy and paste any relevant log output.
-      render: shell
   - type: checkboxes
     id: help-used
     attributes:
       label: Have you tried the following?
       options:
-        - label: Check the [Troubleshooting section](https://github.com/cert-manager/aws-privateca-issuer#troubleshooting)
+        - label: Check the [Troubleshooting section](../../README.md#troubleshooting)
           required: true
         - label: Search open [issues](https://github.com/cert-manager/aws-privateca-issuer/issues)
           required: true
