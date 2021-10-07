@@ -1,7 +1,7 @@
 blank_issues_enabled: false
 contact_links:
   - name: Troubleshooting
-    url: #troubleshooting
+    url: test.com/#troubleshooting
     about: Check the basic troubleshooting steps here
   - name: Search open issues
     url: https://github.com/cert-manager/aws-privateca-issuer/issues
