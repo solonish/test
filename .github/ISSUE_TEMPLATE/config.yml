@@ -8,4 +8,4 @@ contact_links:
     about: Check for any open issues or Known Issue announcements
   - name: Slack Channel
     url: https://kubernetes.slack.com/archives/C02FEDR3FN2
-    about: Ask question on our slack channel "#cert-manager-aws-privateca-issuer"
+    about: "Ask question on our slack channel #cert-manager-aws-privateca-issuer"
