@@ -98,9 +98,11 @@ signing. If using an older version of cert-manager (pre v1.3), you can disable
 this check by supplying the command line flag `-disable-approved-check` to the
 Issuer Deployment.
 
+### Authentication
+
 Please note that if you are using [KIAM](https://github.com/uswitch/kiam) for authentication, this plugin has been tested on KIAM v4.0. [IRSA](https://docs.aws.amazon.com/eks/latest/userguide/iam-roles-for-service-accounts.html) is also tested and supported.
 
-There is a custom AWS authentication method we have coded into our plugin that allows a customer to define a Kubernetes secret with AWS Creds passed in, example [here](https://github.com/cert-manager/aws-privateca-issuer/blob/master/config/samples/secret.yaml). The customer applies that file with their creds and then references the secret in their Issuer CRD when running the plugin, example [here](https://github.com/cert-manager/aws-privateca-issuer/blob/master/config/samples/awspcaclusterissuer_ec/_v1beta1_awspcaclusterissuer_ec.yaml#L8-L10).
+There is a custom AWS authentication method we have coded into our plugin that allows a customer to define a [Kubernetes secret](https://kubernetes.io/docs/concepts/configuration/secret/) with AWS Creds passed in, example [here](https://github.com/cert-manager/aws-privateca-issuer/blob/master/config/samples/secret.yaml). The customer applies that file with their creds and then references the secret in their Issuer CRD when running the plugin, example [here](https://github.com/cert-manager/aws-privateca-issuer/blob/master/config/samples/awspcaclusterissuer_ec/_v1beta1_awspcaclusterissuer_ec.yaml#L8-L10).
 
 ## Running the tests
 
@@ -149,7 +151,7 @@ AWS Private Certificate Authority(PCA) Issuer Plugin supports the following inte
 * Authentication methods:
     * [KIAM v4.0](https://github.com/uswitch/kiam)
     * [IRSA](https://docs.aws.amazon.com/eks/latest/userguide/iam-roles-for-service-accounts.html) - IAM roles for service accounts
-    * [Kubernetes Secrets](https://github.com/cert-manager/aws-privateca-issuer/blob/master/config/samples/secret.yaml)
+    * [Kubernetes Secrets](https://github.com/solonish/test#authentication)
     * [EC2 Instance Profiles](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_use_switch-role-ec2_instance-profiles.html)
 
 * AWS Private CA features:
