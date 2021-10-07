@@ -100,6 +100,8 @@ Issuer Deployment.
 
 Please note that if you are using [KIAM](https://github.com/uswitch/kiam) for authentication, this plugin has been tested on KIAM v4.0. [IRSA](https://docs.aws.amazon.com/eks/latest/userguide/iam-roles-for-service-accounts.html) is also tested and supported.
 
+There is a custom AWS authentication method we have coded into our plugin that allows a customer to define a Kubernetes secret with AWS Creds passed in, example [here](https://github.com/cert-manager/aws-privateca-issuer/blob/master/config/samples/secret.yaml). The customer applies that file with their creds and then references the secret in their Issuer CRD when running the plugin, example [here](https://github.com/cert-manager/aws-privateca-issuer/blob/master/config/samples/awspcaclusterissuer_ec/_v1beta1_awspcaclusterissuer_ec.yaml#L8-L10).
+
 ## Running the tests
 
 Running ```make test``` will run the written unit test
@@ -138,6 +140,23 @@ After the test, the resources created with the kind cluster are cleaned up, the 
 The Private CAs created during this test run are cleaned up on a **best-effort basis**. To ensure no runaway costs, verify via the AWS CLI or Console that the Private CAs created during the test run are in a deleted state. If you need to delete the Private CAs created during the test run yourself you may use the script test_utils/delete_ca.sh or refer to the [AWS Private CA documentation](https://docs.aws.amazon.com/acm-pca/latest/userguide/PCADeleteCA.html)
 
 If at any point, ```make runtests``` encounters an error, the integration tests should be considered a failure.
+## Supported workflows
+
+AWS Private Certificate Authority(PCA) Issuer Plugin supports the following integrations and use cases:
+
+* Integration with [cert-manager 1.4+](https://cert-manager.io/docs/installation/supported-releases/) and corresponding Kubernetes versions.
+
+* Authentication methods:
+    * [KIAM v4.0](https://github.com/uswitch/kiam)
+    * [IRSA](https://docs.aws.amazon.com/eks/latest/userguide/iam-roles-for-service-accounts.html) - IAM roles for service accounts
+    * [Kubernetes Secrets](https://github.com/cert-manager/aws-privateca-issuer/blob/master/config/samples/secret.yaml)
+    * [EC2 Instance Profiles](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_use_switch-role-ec2_instance-profiles.html)
+
+* AWS Private CA features:
+    *  [End-to-End TLS encryption on Amazon Elastic Kubernetes Service](https//aws.amazon.com/blogs/containers/setting-up-end-to-end-tls-encryption-on-%20amazon-eks-with-the-new-aws-load-balancer-controller/)(Amazon EKS).
+    * [TLS-enabled Kubernetes clusters with AWS Private CA and Amazon EKS](https://aws.amazon.com/blogs/security/tls-enabled-kubernetes-clusters-with-acm-private-ca-%20and-amazon-eks-2/)
+    * Cross Account CA sharing with supported Cross Account templates
+    * [Supported PCA Certificate Templates](https://docs.aws.amazon.com/acm-pca/latest/userguide/UsingTemplates.html#template-varieties): CodeSigningCertificate/V1; EndEntityClientAuthCertificate/V1; EndEntityServerAuthCertificate/V1; OCSPSigningCertificate/V1; EndEntityCertificate/V1; BlankEndEntityCertificate_CSRPassthrough/V1
 
 ## Troubleshooting
 
@@ -145,7 +164,7 @@ If at any point, ```make runtests``` encounters an error, the integration tests 
 
 2. If the generated CertificateRequest shows no events, it is very likely that you're using an older version of cert-manager which doesn't support approval check. Disable approval check at the issuer deployment.
 
-# Help & Feedback
+## Help & Feedback
 
 For help, please consider the following venues (in order):
 
@@ -155,7 +174,7 @@ For help, please consider the following venues (in order):
 * Please ask questions in the slack channel [cert-manager-aws-privateca-issuer]()
 
 
-# Contributing
+## Contributing
 
 We welcome community contributions and pull requests.
 
