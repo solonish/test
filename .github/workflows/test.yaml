@@ -42,7 +42,7 @@ jobs:
         uses: divyansh-gupta/ec2-github-runner@cc04b23befe52cc1f2e4e8ae8047d1c3b7dc40af
         with:
           mode: start
-          github-token: GithubToken-test-us-east-1
+          github-token: Github-Token-test-us-east-1
           ec2-image-id: ${{ env.AMI }}
           ec2-instance-type: t3.medium
           subnet-id: ${{ env.SUBNET_ID }}
@@ -181,6 +181,6 @@ jobs:
         uses: divyansh-gupta/ec2-github-runner@cc04b23befe52cc1f2e4e8ae8047d1c3b7dc40af
         with:
           mode: stop
-          github-token: GithubToken-test-us-east-1
+          github-token: Github-Token-test-us-east-1
           label: ${{ needs.start-runner.outputs.label }}
           ec2-instance-id: ${{ needs.start-runner.outputs.ec2-instance-id }}
